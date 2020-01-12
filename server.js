@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const config = require("./utils/config");
@@ -28,6 +29,9 @@ app.use(cors());
 
 // Request logger middleware
 app.use(middleware.requestLogger);
+
+// Set static folder
+app.use(express.static(path.join(__dirname, "public")));
 
 // Routes
 app.use("/api/v1/stores", require("./routes/stores"));
