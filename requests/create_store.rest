@@ -1,0 +1,7 @@
+post http://localhost:3001/api/v1/stores
+Content-Type: application/json
+
+{
+  "storeId": "0001",
+  "address": "Kantelettarentie 1, 00420 Helsinki"
+}
